@@ -29,4 +29,20 @@ document.getElementById('key-pad').addEventListener('click', function(e){
     const  newNumber = previousNumber + number
     calcInput.value = newNumber
     }
-})
+});
+
+
+function verifyPin(){
+    const typeInput = document.getElementById('type-input').value;
+    const pin = document.getElementById('display-pin').value;
+    const successMessage = document.getElementById('notify-success');
+    const failError = document.getElementById('notify-fail');
+    if(typeInput == pin){
+        successMessage.style.display ="block";
+        failError.style.display ="none";
+    }
+    else{
+        successMessage.style.display ="none";
+         failError.style.display ="block";
+    }
+}
